@@ -32,10 +32,12 @@ public with sharing class VariablesDataTypesOperators {
      * @return The sum of the two numbers, or null if either number is null.
      */
     public static Integer addition(Integer a, Integer b) {  
-        if(a==null || b==null)
+        if(a==null || b==null){
             return null;
-        
+    }
+        else {
         return a + b;
+        }
     }
 
     /**
@@ -47,8 +49,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return The difference between the two numbers.
      */
     public static Integer subtraction(Integer a, Integer b) {
-        if(a==null || b==null)
+        if(a==null || b==null){
             return null;
+        }
         return a - b;
     }
 
@@ -61,9 +64,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return The product of the two numbers.
      */
     public static Integer multiplication(Integer a, Integer b) {
-        if(a==null || b==null)
+        if(a==null || b==null){
             return null;
-  
+        }
         return a * b;
     }
 
@@ -77,9 +80,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
     public static Double division(Double a, Double b) {
-        if(b==0)
+        if(b==0){
             return 0;
-    
+        }
         return a / b; //
     }
 
@@ -94,9 +97,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the number is even, False otherwise.
      */
     public static Boolean isEven(Integer num) {
-        if(math.mod(num, 2)==0)
+        if(math.mod(num, 2)==0){
             return true;
-        
+        }
         return false;
     }
 
@@ -108,9 +111,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return true if the number is positive, false otherwise.
      */
     public static Boolean isPositive(Integer num) {
-        if(num>0)
+        if(num>0){
             return true;
-
+        }
         return false;
     }
 
@@ -153,8 +156,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is in the past, False otherwise.
      */
     public static Boolean isDateInPast(Date dt) {
-        if(dt < Date.today())
+        if(dt < Date.today()){
             return true;
+        }
         return false;
     }
 
@@ -168,9 +172,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is today or in the future, False otherwise.
      */
     public static Boolean isDateTodayOrFuture(Date dt) {
-        if(dt >= Date.today())
+        if(dt >= Date.today()){
             return true;
-
+        }
         return false;
     }
 
