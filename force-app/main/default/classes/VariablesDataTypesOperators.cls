@@ -32,11 +32,8 @@ public with sharing class VariablesDataTypesOperators {
      * @return The sum of the two numbers, or null if either number is null.
      */
     public static Integer addition(Integer a, Integer b) {  
-        if(a==null || b==null){
-            return null;
-    } else {
-        return a + b;
-    }
+        return (a==null || b==null) ? null : a + b;
+
     }
 
     /**
@@ -48,10 +45,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The difference between the two numbers.
      */
     public static Integer subtraction(Integer a, Integer b) {
-        if(a==null || b==null){
-            return null;
-        }
-        return a - b;
+        return (a==null || b==null) ? null : a - b;
     }
 
     /**
@@ -63,10 +57,8 @@ public with sharing class VariablesDataTypesOperators {
      * @return The product of the two numbers.
      */
     public static Integer multiplication(Integer a, Integer b) {
-        if(a==null || b==null){
-            return null;
-        }
-        return a * b;
+        return (a==null || b==null) ? null : a * b;
+  
     }
 
     /**
@@ -107,7 +99,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return true if the number is positive, false otherwise.
      */
     public static Boolean isPositive(Integer num) {
-        return num>0;
+        return num > 0 ;
     }
 
     /**
