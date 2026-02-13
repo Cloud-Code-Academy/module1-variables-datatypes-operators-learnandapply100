@@ -34,10 +34,9 @@ public with sharing class VariablesDataTypesOperators {
     public static Integer addition(Integer a, Integer b) {  
         if(a==null || b==null){
             return null;
-    }
-        else {
+    } else {
         return a + b;
-        }
+    }
     }
 
     /**
@@ -80,7 +79,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
     public static Double division(Double a, Double b) {
-        if(b==0){
+        if(a == null || b == null || b == 0){
             return 0;
         }
         return a / b; //
@@ -97,10 +96,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the number is even, False otherwise.
      */
     public static Boolean isEven(Integer num) {
-        if(math.mod(num, 2)==0){
-            return true;
-        }
-        return false;
+        return Math.mod(num, 2) == 0;
     }
 
     /**
@@ -111,10 +107,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return true if the number is positive, false otherwise.
      */
     public static Boolean isPositive(Integer num) {
-        if(num>0){
-            return true;
-        }
-        return false;
+        return num>0;
     }
 
     /**
@@ -142,7 +135,7 @@ public with sharing class VariablesDataTypesOperators {
 	 */
 	public static String createSentence(String noun, String verb, String endingPunctuation) {
         String sentence;
-        sentence = 'The '+noun+' is'+' '+verb+endingPunctuation;
+        sentence = 'The '+noun+' is '+verb+endingPunctuation;
 		return sentence;
 	}
 
@@ -156,10 +149,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is in the past, False otherwise.
      */
     public static Boolean isDateInPast(Date dt) {
-        if(dt < Date.today()){
-            return true;
-        }
-        return false;
+        return dt < Date.today();
     }
 
     /**
@@ -172,10 +162,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is today or in the future, False otherwise.
      */
     public static Boolean isDateTodayOrFuture(Date dt) {
-        if(dt >= Date.today()){
-            return true;
-        }
-        return false;
+        return dt >= Date.today();
     }
 
     /**
